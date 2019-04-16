@@ -1,10 +1,18 @@
 const { sum, subtract } = require("./testingrecap");
 
-function sumTest() {
+// test("add two numbers", sumTest);
+test("subtract two numbers", subtractTest);
+
+test("add two numbers", () => {
 	const result = sum(10, 4);
 	const expected = 14;
 	expect(result).toBe(expected);
-}
+});
+// function sumTest() {
+// 	const result = sum(10, 4);
+// 	const expected = 14;
+// 	expect(result).toBe(expected);
+// }
 function subtractTest() {
 	const result = subtract(10, 4);
 	const expected = 6;
@@ -30,5 +38,3 @@ function test(title, cb) {
 		console.error(err);
 	}
 }
-test("add two numbers", sumTest);
-test("subtract two numbers", subtractTest);
